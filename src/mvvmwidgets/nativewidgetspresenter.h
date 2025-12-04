@@ -11,6 +11,7 @@
 namespace QtMvvm {
 
 //! Native presenter implementation that uses Qt Widgets under the hood
+//! @note QObject is first base class for proper Qt meta-object system support
 class Q_MVVMWIDGETS_EXPORT NativeWidgetsPresenter : public QObject, public NativePresenterBase
 {
 	Q_OBJECT

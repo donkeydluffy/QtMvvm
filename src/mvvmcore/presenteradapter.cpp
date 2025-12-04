@@ -112,8 +112,8 @@ MessageConfig PresenterAdapter::convertMessageConfigFromNative(const NativeMessa
 // NativePresenterAdapter implementation
 
 NativePresenterAdapter::NativePresenterAdapter(IPresenter *qtPresenter)
-	: m_qtPresenter(qtPresenter)
-	, m_viewFactories()
+	: NativePresenterBase()  // Initialize base class
+	, m_qtPresenter(qtPresenter)
 {
 }
 
@@ -136,24 +136,6 @@ void NativePresenterAdapter::showDialog(const NativeMessageConfig &config, Messa
 		auto qtConfig = PresenterAdapter::convertMessageConfigFromNative(config);
 		m_qtPresenter->showDialog(qtConfig, result);
 	}
-}
-
-void NativePresenterAdapter::registerViewFactory(std::shared_ptr<INativeViewFactory> factory)
-{
-	if (factory) {
-		m_viewFactories.push_back(factory);
-	}
-}
-
-bool NativePresenterAdapter::canPresent(const std::string &viewModelTypeName) const
-{
-	// Check if any registered factory can create a view for this view model
-	for (const auto &factory : m_viewFactories) {
-		if (factory && factory->canCreateView(viewModelTypeName)) {
-			return true;
-		}
-	}
-	return false;
 }
 
 IPresenter* NativePresenterAdapter::qtPresenter() const

@@ -44,7 +44,8 @@ private:
 };
 
 //! Adapter to bridge from INativePresenter to IPresenter
-class Q_MVVMCORE_EXPORT NativePresenterAdapter : public INativePresenter
+//! @note Inherits from NativePresenterBase to reuse view factory management
+class Q_MVVMCORE_EXPORT NativePresenterAdapter : public NativePresenterBase
 {
 public:
 	//! Constructor taking a Qt presenter
@@ -56,15 +57,12 @@ public:
 	            const std::map<std::string, std::string> &params, 
 	            ViewModel *parentViewModel = nullptr) override;
 	void showDialog(const NativeMessageConfig &config, MessageResult *result) override;
-	void registerViewFactory(std::shared_ptr<INativeViewFactory> factory) override;
-	bool canPresent(const std::string &viewModelTypeName) const override;
 
 	//! Get the underlying Qt presenter
 	IPresenter* qtPresenter() const;
 
 private:
 	IPresenter *m_qtPresenter;
-	std::vector<std::shared_ptr<INativeViewFactory>> m_viewFactories;
 };
 
 }

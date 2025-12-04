@@ -58,6 +58,9 @@ void* QtWidgetAdapter::viewModelPtr() const
 	}
 	
 	// Try to find the ViewModel in the widget's parent hierarchy
+	// Note: This assumes the ViewModel is set as the parent QObject of the widget,
+	// which is the standard QtMvvm pattern. If custom view creation doesn't follow
+	// this pattern, this method may return nullptr.
 	auto vm = qobject_cast<ViewModel*>(m_widget->parent());
 	return vm;
 }
