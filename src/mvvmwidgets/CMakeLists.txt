@@ -10,8 +10,6 @@ set(SOURCES
     tooltipslider.cpp
     coloredit.cpp
     progressdialog.cpp
-    qtwidgetadapter.cpp
-    nativewidgetspresenter.cpp
 )
 
 set(HEADERS
@@ -28,8 +26,6 @@ set(HEADERS
     tooltipslider_p.h
     coloredit_p.h
     progressdialog_p.h
-    qtwidgetadapter.h
-    nativewidgetspresenter.h
 )
 
 set(FORMS
@@ -54,7 +50,7 @@ target_link_libraries(QtMvvmWidgets PUBLIC
     Qt${QT_VERSION_MAJOR}::Core
     Qt${QT_VERSION_MAJOR}::Gui
     Qt${QT_VERSION_MAJOR}::Widgets
-    QtMvvm::Core
+    QtMvvm::QtAdapter  # Now depends on Qt adapter instead of pure core
 )
 
 # Include directories

@@ -1,6 +1,7 @@
 # Add library subdirectories
-add_subdirectory(mvvmcore)
-add_subdirectory(mvvmwidgets)
+add_subdirectory(mvvmcore)        # Pure C++ core (NO Qt)
+add_subdirectory(mvvmqtadapter)   # Qt adapter layer
+add_subdirectory(mvvmwidgets)     # Qt Widgets integration
 
 # Optional modules
 if(Qt${QT_VERSION_MAJOR}Quick_FOUND)

@@ -23,8 +23,9 @@ target_link_libraries(NativeWidgetIntegration PRIVATE
     Qt${QT_VERSION_MAJOR}::Core
     Qt${QT_VERSION_MAJOR}::Gui
     Qt${QT_VERSION_MAJOR}::Widgets
-    QtMvvm::Core
-    QtMvvm::Widgets
+    QtMvvm::Core        # Pure C++ MVVM core
+    QtMvvm::QtAdapter   # Qt bridge layer
+    QtMvvm::Widgets     # Qt Widgets integration
 )
 
 # Set C++ standard
