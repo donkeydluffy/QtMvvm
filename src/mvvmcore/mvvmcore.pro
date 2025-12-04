@@ -33,7 +33,9 @@ HEADERS += \
 	nativeviewmodel.h \
 	viewmodeladapter.h \
 	nativebinding.h \
-	bindingadapter.h
+	bindingadapter.h \
+	nativemessage.h \
+	messageadapter.h
 
 SOURCES += \
 	viewmodel.cpp \
@@ -54,7 +56,9 @@ SOURCES += \
 	nativeviewmodel.cpp \
 	viewmodeladapter.cpp \
 	nativebinding.cpp \
-	bindingadapter.cpp
+	bindingadapter.cpp \
+	nativemessage.cpp \
+	messageadapter.cpp
 
 android {
 	QT += androidextras

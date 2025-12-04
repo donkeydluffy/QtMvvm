@@ -10,5 +10,7 @@
 #include "QtMvvmCore/viewmodeladapter.h"
 #include "QtMvvmCore/nativebinding.h"
 #include "QtMvvmCore/bindingadapter.h"
+#include "QtMvvmCore/nativemessage.h"
+#include "QtMvvmCore/messageadapter.h"
 
 #endif // QTMVVM_NATIVEINTERFACE_H
