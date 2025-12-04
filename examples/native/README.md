@@ -18,6 +18,15 @@ Pure C++ interface for views, providing basic operations like show(), hide(), cl
 ### INativePresenter
 Pure C++ presenter interface that manages view lifecycle and presentation without Qt dependencies.
 
+### INativeViewModel (NEW - Phase 2A) ✅
+Pure C++ ViewModel interface without QObject dependency. Uses std::function callbacks instead of Qt signals.
+
+### INativeBinding (NEW - Phase 2A) ✅
+Pure C++ data binding interface without Qt meta-object system. Enables two-way property synchronization.
+
+### ViewModelAdapter (NEW - Phase 2A) ✅
+Bridges between Qt ViewModel and INativeViewModel, enabling interoperability.
+
 ### PresenterAdapter
 Bridges between Qt-based IPresenter and pure C++ INativePresenter, allowing gradual migration.
 
@@ -27,14 +36,31 @@ Adapter that makes QWidget compatible with INativeView, enabling Qt widgets to w
 ## Example Structure
 
 - **simple_native_example.cpp** - A minimal example showing how to implement a native view and presenter
-- **native_viewmodel.h/cpp** - Example ViewModel that works with both Qt and native interfaces
-- **console_view.h/cpp** - A simple console-based view implementation
+- **integration_example.cpp** - Shows how to mix Qt and native views in the same application
+- **viewmodel_binding_example.cpp** - Demonstrates native ViewModel and data binding without Qt dependencies
+
+## Key Features (Phase 2A)
+
+### INativeViewModel
+Pure C++ ViewModel interface that works with both Qt and native interfaces.
+
+### INativeBinding
+Data binding system using callbacks instead of Qt signals/slots.
+
+### Complete Examples
+The examples now demonstrate fully Qt-independent business logic using native interfaces.
 
 ## Building
 
-These examples demonstrate the concept but may require Qt for the ViewModel base class.
-For a truly Qt-independent version, you would need to implement your own ViewModel base
-that doesn't depend on QObject.
+To build the standalone examples (no Qt required for business logic):
+```bash
+g++ -std=c++14 simple_native_example.cpp -o simple_example
+g++ -std=c++14 viewmodel_binding_example.cpp -o viewmodel_example
+./simple_example
+./viewmodel_example
+```
+
+For Qt integration examples, use qmake as usual.
 
 ## Migration Path
 
