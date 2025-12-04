@@ -80,3 +80,17 @@ qpmx.user.json
 qpmx.json.user
 *.pro.dummy
 *.qmlc
+
+# CMake generated files
+build/
+build_*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+*.cmake
+!CMakeLists.txt
+!cmake/*.cmake
+!cmake/*.cmake.in
+compile_commands.json
+CTestTestfile.cmake
+_deps/

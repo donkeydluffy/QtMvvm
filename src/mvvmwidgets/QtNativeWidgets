@@ -1,0 +1,9 @@
+#ifndef QTMVVM_QTNATIVEWIDGETS_H
+#define QTMVVM_QTNATIVEWIDGETS_H
+
+// Convenience header for Qt Widgets with native interface support
+
+#include "QtMvvmWidgets/qtwidgetadapter.h"
+#include "QtMvvmWidgets/nativewidgetspresenter.h"
+
+#endif // QTMVVM_QTNATIVEWIDGETS_H

@@ -15,7 +15,9 @@ HEADERS += \
 	settingsdialog.h \
 	tooltipslider_p.h \
 	coloredit_p.h \
-	progressdialog_p.h
+	progressdialog_p.h \
+	qtwidgetadapter.h \
+	nativewidgetspresenter.h
 
 SOURCES += \
 	widgetspresenter.cpp \
@@ -25,7 +27,9 @@ SOURCES += \
 	settingsdialog.cpp \
 	tooltipslider.cpp \
 	coloredit.cpp \
-	progressdialog.cpp
+	progressdialog.cpp \
+	qtwidgetadapter.cpp \
+	nativewidgetspresenter.cpp
 
 FORMS += \
 	settingsdialog.ui

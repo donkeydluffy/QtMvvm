@@ -1,0 +1,18 @@
+#ifndef QTMVVM_NATIVEINTERFACE_H
+#define QTMVVM_NATIVEINTERFACE_H
+
+// Convenience header that includes all native interface components
+
+#include "QtMvvmCore/nativeview.h"
+#include "QtMvvmCore/nativepresenter.h"
+#include "QtMvvmCore/presenteradapter.h"
+#include "QtMvvmCore/nativeviewmodel.h"
+#include "QtMvvmCore/viewmodeladapter.h"
+#include "QtMvvmCore/nativebinding.h"
+#include "QtMvvmCore/bindingadapter.h"
+#include "QtMvvmCore/nativemessage.h"
+#include "QtMvvmCore/messageadapter.h"
+#include "QtMvvmCore/nativeserviceregistry.h"
+#include "QtMvvmCore/serviceregistryadapter.h"
+
+#endif // QTMVVM_NATIVEINTERFACE_H
