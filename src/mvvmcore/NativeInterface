@@ -12,5 +12,7 @@
 #include "QtMvvmCore/bindingadapter.h"
 #include "QtMvvmCore/nativemessage.h"
 #include "QtMvvmCore/messageadapter.h"
+#include "QtMvvmCore/nativeserviceregistry.h"
+#include "QtMvvmCore/serviceregistryadapter.h"
 
 #endif // QTMVVM_NATIVEINTERFACE_H

@@ -35,7 +35,9 @@ HEADERS += \
 	nativebinding.h \
 	bindingadapter.h \
 	nativemessage.h \
-	messageadapter.h
+	messageadapter.h \
+	nativeserviceregistry.h \
+	serviceregistryadapter.h
 
 SOURCES += \
 	viewmodel.cpp \
@@ -58,7 +60,9 @@ SOURCES += \
 	nativebinding.cpp \
 	bindingadapter.cpp \
 	nativemessage.cpp \
-	messageadapter.cpp
+	messageadapter.cpp \
+	nativeserviceregistry.cpp \
+	serviceregistryadapter.cpp
 
 android {
 	QT += androidextras

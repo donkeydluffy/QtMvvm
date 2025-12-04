@@ -33,6 +33,9 @@ Pure C++ interface for message dialog results without QObject dependency. Uses c
 ### INativeProgressControl (NEW - Phase 2B) ✅
 Pure C++ interface for progress tracking without Qt. Supports indeterminate and determinate modes.
 
+### INativeServiceRegistry (NEW - Phase 2C) ✅
+Pure C++ service registry interface for dependency injection without Qt meta-object system. Supports lazy instantiation and singleton management.
+
 ### PresenterAdapter
 Bridges between Qt-based IPresenter and pure C++ INativePresenter, allowing gradual migration.
 
@@ -45,6 +48,7 @@ Adapter that makes QWidget compatible with INativeView, enabling Qt widgets to w
 - **integration_example.cpp** - Shows how to mix Qt and native views in the same application
 - **viewmodel_binding_example.cpp** - Demonstrates native ViewModel and data binding without Qt dependencies
 - **message_example.cpp** - Shows native message result and progress control without Qt dependencies
+- **serviceregistry_example.cpp** - Demonstrates native service registry and dependency injection without Qt dependencies
 
 ## Key Features (Phase 2A)
 
@@ -64,9 +68,11 @@ To build the standalone examples (no Qt required for business logic):
 g++ -std=c++14 simple_native_example.cpp -o simple_example
 g++ -std=c++14 viewmodel_binding_example.cpp -o viewmodel_example
 g++ -std=c++14 message_example.cpp -o message_example -pthread
+g++ -std=c++14 serviceregistry_example.cpp -o serviceregistry_example
 ./simple_example
 ./viewmodel_example
 ./message_example
+./serviceregistry_example
 ```
 
 For Qt integration examples, use qmake as usual.
