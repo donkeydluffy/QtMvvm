@@ -74,7 +74,18 @@ Good links to get started:
 	3. You can install either all of my modules, or select the one you need: `Qt Mvvm`
 	4. Continue the setup and thats it! you can now use the module for all of your installed Kits for that Qt Version
 3. Download the compiled modules from the release page. **Note:** You will have to add the correct ones yourself and may need to adjust some paths to fit your installation! In addition to that, you will have to download the modules this one depends on as well. See Section "Requirements" below.
-4. Build it yourself! **Note:** This requires all build an runtime dependencies to be available (See Section "Requirements" below). If you don't have/need cmake, you can ignore the related warnings. To automatically build and install to your Qt installation, run:
+4. Build it yourself with **CMake** (Recommended) or qmake:
+	
+	**CMake Build (New):**
+	```bash
+	mkdir build && cd build
+	cmake .. -DCMAKE_PREFIX_PATH=/path/to/Qt
+	cmake --build .
+	cmake --build . --target install
+	```
+	See [CMAKE_BUILD.md](CMAKE_BUILD.md) for detailed CMake build instructions.
+	
+	**qmake Build (Legacy):**
 	- `qmake`
 	- `make qmake_all`
 	- `make` (If you want the tests/examples/etc. run `make all`)
@@ -82,6 +93,8 @@ Good links to get started:
 		- `make doxygen` to generate the documentation
 		- `make lrelease` to generate the translations
 	- `make install`
+	
+	**Note:** Both build systems can coexist. CMake provides better cross-platform support and integration with modern C++ toolchains.
 
 ### Requirements
 The library only has a few dependencies. The main modules only depends on qtbase and qtquick respectively. However, the Datasync extensions need QtDataSync of course.
