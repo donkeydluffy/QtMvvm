@@ -30,6 +30,11 @@ The key features are:
 - Macros and a ServiceRegistry to make Dependency Injection possible for Services and ViewModels
 - A generic Presenter Interface so you can create your own custom GUI implementations
 	- Widgets and Qt Quick Controls 2 are supported out of the box
+- **NEW: Native C++ Interface** - Pure C++ abstractions for cross-platform UI development
+	- Qt-independent view and presenter interfaces
+	- Compatible with any C++ UI framework
+	- Seamless integration with existing Qt code via adapters
+	- See [Native Interface Guide](doc/native_interface_guide.md) and [Migration Guide](doc/MIGRATION_TO_NATIVE.md)
 - Generic Edit-View factories to create simple edits for any kind of data from the core code
 - Supports an extensive "Settings GUI" via a simple XML format
 
