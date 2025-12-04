@@ -29,7 +29,11 @@ HEADERS += \
 	exception.h \
 	nativeview.h \
 	nativepresenter.h \
-	presenteradapter.h
+	presenteradapter.h \
+	nativeviewmodel.h \
+	viewmodeladapter.h \
+	nativebinding.h \
+	bindingadapter.h
 
 SOURCES += \
 	viewmodel.cpp \
@@ -46,7 +50,11 @@ SOURCES += \
 	settingsconfigloader.cpp \
 	nativeview.cpp \
 	nativepresenter.cpp \
-	presenteradapter.cpp
+	presenteradapter.cpp \
+	nativeviewmodel.cpp \
+	viewmodeladapter.cpp \
+	nativebinding.cpp \
+	bindingadapter.cpp
 
 android {
 	QT += androidextras
