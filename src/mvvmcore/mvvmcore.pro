@@ -26,7 +26,10 @@ HEADERS += \
 	qsettingsaccessor.h \
 	settingsentry.h \
 	settingsconfigloader_p.h \
-    exception.h
+	exception.h \
+	nativeview.h \
+	nativepresenter.h \
+	presenteradapter.h
 
 SOURCES += \
 	viewmodel.cpp \
@@ -40,7 +43,10 @@ SOURCES += \
 	isettingsaccessor.cpp \
 	qsettingsaccessor.cpp \
 	settingsentry.cpp \
-	settingsconfigloader.cpp
+	settingsconfigloader.cpp \
+	nativeview.cpp \
+	nativepresenter.cpp \
+	presenteradapter.cpp
 
 android {
 	QT += androidextras
